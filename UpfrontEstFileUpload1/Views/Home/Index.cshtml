@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using UpfrontEstFileUpload1.Models
+@model EnteredDates
+
+<script src="~/Scripts/validateFileSelected.js"></script>
+<br />
+<br />
+<label for="myform">Upload Estimates Spreadsheet</label>
+<div class="verticalLine contentPadding">
+    <div class="uploadForm">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { onsubmit = "return validateFileSelected()", encType = "multipart/form-data", id = "myform", name = "myform", required = "required" }))
+        {
+            <br />
+            <input type="file" name="FileUpload" id="FileUpload" style="width:50%" />
+            <p id="fileNotFoundError" style="color: darkred"></p>
+            <br />
+            <input type="submit" name="Submit" id="Submit" value="Upload" class="button Submit" />
+        }
+    </div>
+</div>
+<br />
+<br />
+<label for="enteredDates">Estimate File Upload Dates</label>
+<div class="verticalLine contentPadding">
+    <div>
+        @Html.ListBoxFor(x => x.InsertedDateList, Model.DateSelectList, new { id = "enteredDates" })
+    </div>
+</div>
+<br />
+<br />
+<div>
+    <a href="http://xrpswpjrssps01c/reports/report/Upfront_Estimate_ICS/Upfront_Estimate" target="_blank" class="button">View Upfront Estimate Report</a>
+</div>

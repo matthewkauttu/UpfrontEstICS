@@ -1,0 +1,53 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbarColor {
+    background-color: #1F365F;
+}
+
+.bg-img {
+    background-image: url("img/Parallon_Bar.png");
+    background-size: 100% 100%;
+}
+
+.contentPadding {
+    padding: 10px;
+}
+
+.titleText {
+    color: whitesmoke;
+}
+
+.verticalLine {
+    border-left: thin solid #000000;
+}
+
+.uploadForm {
+    padding-left: 10px;
+}
+
+input, label {
+    display:block
+}
